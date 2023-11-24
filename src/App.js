@@ -13,24 +13,31 @@ import Channel from './pages/Channel'
 import Video from './pages/Video'
 import Search from './pages/Search'
 import Not from './pages/Not'
+import Header from './components/section/Header'
+import Main from './components/section/Main'
+import Footer from './components/section/Footer'
 
 const App = () => {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route Path='/' element={<Home/>} />
-            <Route Path='/today' element={<Today/>} />
-            <Route Path='/developer' element={<Developer/>} />
-            <Route Path='/webd' element={<Webd/>} />
-            <Route Path='/website' element={<Website/>} />
-            <Route Path='/gsap' element={<Gsap/>} />
-            <Route Path='/port' element={<Port/>} />
-            <Route Path='/youtube' element={<Youtube/>} />
-            <Route Path='/channel/:channelID' element={<Channel/>} />
-            <Route Path='/video/:video' element={<Video/>} />
-            <Route Path='/search/:searchID' element={<Search/>} />
-            <Route Path='/*' element={<Not/>} />
-        </Routes>
+        <Header />
+        <Main>
+            <Routes>
+                <Route Path='/' element={<Home/>} />
+                <Route Path='/today' element={<Today/>} />
+                <Route Path='/developer' element={<Developer/>} />
+                <Route Path='/webd' element={<Webd/>} />
+                <Route Path='/website' element={<Website/>} />
+                <Route Path='/gsap' element={<Gsap/>} />
+                <Route Path='/port' element={<Port/>} />
+                <Route Path='/youtube' element={<Youtube/>} />
+                <Route Path='/channel/:channelID' element={<Channel/>} />
+                <Route Path='/video/:video' element={<Video/>} />
+                <Route Path='/search/:searchID' element={<Search/>} />
+                <Route Path='/*' element={<Not/>} />
+            </Routes>
+            </Main>
+        <Footer />
     </BrowserRouter>
   )
 }
